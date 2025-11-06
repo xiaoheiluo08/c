@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug project",
+            "type": "cppdbg",
+            "request": "launch",
+            
+            "program": "${workspaceFolder}/main.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "E:\\mingw64\\bin\\gdb.exe",
+            "preLaunchTask": "build project", // 确保该任务能正确生成可执行文件
+            "miDebuggerArgs": "",
+            "logging": {
+                "moduleLoad": false,
+                "programOutput": true
+            }
+        }
+    ]
+}
