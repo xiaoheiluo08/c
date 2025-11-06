@@ -40,8 +40,11 @@ int main()
     printf("复制前c:%s\r\n",c);
     str_copy(c,b);
     printf("复制后c:%s\r\n",c);
+<<<<<<< HEAD
 
     printf("该项目已上传gittub");
     printf("第一次尝试上传");
+=======
+>>>>>>> feb3411e0a838d3806a26de71eb4066b9c923811
     
 }
