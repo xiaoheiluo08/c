@@ -1,0 +1,39 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "build project",  // 任务名称，需与 launch.json 中的 preLaunchTask 一致
+			"command": "e:\\mingw64\\bin\\gcc.exe",  // 使用 C 编译器 gcc
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",  // 生成调试信息
+				"main.c",  // 源代码文件（C语言）
+				"str_handle.c",
+				"-o",
+				"main.exe"  // 输出的可执行文件名
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": ["$gcc"],
+			"group": "build",
+			"detail": "编译器: e:\\mingw64\\bin\\gcc.exe"  // 修正编译器描述
+		},
+		{
+            "label": "run main.exe",
+            "type": "shell",
+            "command": "main.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": "build project",  // 先执行编译任务
+            "group": {
+    			"kind": "build",
+    			"isDefault": true
+			},
+            "problemMatcher": [],
+            "detail": "运行编译后的可执行文件"
+        }
+	]
+}
