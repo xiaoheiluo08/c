@@ -42,5 +42,6 @@ int main()
     printf("复制后c:%s\r\n",c);
 
     printf("该项目已上传gittub");
+    printf("第一次尝试上传");
     
 }
